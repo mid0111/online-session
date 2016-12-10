@@ -1,0 +1,22 @@
+{
+	"app": {
+		"title": "Online Session"
+	},
+	"upload": {
+		"title": "Upload Slide",
+		"pageTitle": "スライドアップロード",
+		"label": {
+			"file": "Slide",
+			"title": "Title",
+			"author": "Author"
+		},
+		"placeholder": {
+			"title": "スライドのタイトルを入力してください",
+			"author": "スライドの作者を入力してください",
+			"file": "アップロードするスライドを選択してください"
+		},
+		"form": {
+			"submit": "アップロード"
+		}
+	}
+}

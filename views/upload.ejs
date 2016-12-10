@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./components/header') %>
+    <title><%= __('upload.title') %></title>
+  </head>
+  <body>
+    <h1><%= __('upload.pageTitle') %></h1>
+
+    <form action="/api/upload" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label"><%= __('upload.label.file') %></label>
+        <div class="col-sm-10">
+          <input type="file" class="form-control" name="file">
+          <p class="help-block"><%= __('upload.placeholder.file')%></p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label"><%= __('upload.label.title') %></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="title" placeholder="<%= __('upload.placeholder.title')%>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="col-sm-2 control-label"><%= __('upload.label.author') %></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" name="author" placeholder="<%= __('upload.placeholder.author')%>">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default"><%= __('upload.form.submit')%></button>
+        </div>
+      </div>
+
+    </form>
+  </body>
+</html>

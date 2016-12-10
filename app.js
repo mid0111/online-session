@@ -5,6 +5,14 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+// i18n
+const i18n = require("i18n");
+i18n.configure({
+  locales:['ja'],
+  directory: __dirname + '/locales',
+  objectNotation: true
+});
+
 const routes = require('./routes/');
 
 const app = express();
@@ -20,6 +28,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(i18n.init);
 
 app.use('/', routes);
 
