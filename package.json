@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "DEBUG=online-session:* npm start",
+    "test": "mocha test/**/*.spec.js",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -17,5 +18,9 @@
   },
   "engines": {
     "node": ">=6.9"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
   }
 }
