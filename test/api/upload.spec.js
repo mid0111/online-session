@@ -21,7 +21,7 @@ describe('Upload API', () => {
       .attach('file', pdf)
       .field('title', title)
       .field('author', author)
-      .expect(202)
+      .expect(200)
       .expect((res) => {
         expect(res.body.status).to.be.a('Number');
         expect(res.body.title).to.equal(title);
