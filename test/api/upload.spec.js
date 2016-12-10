@@ -1,7 +1,5 @@
-process.env.UPLOAD_DIR = 'uploads_test';
+const client = require('../lib/client');
 
-const request = require('supertest');
-const app = require('../../app');
 const expect = require('chai').expect;
 const path = require('path');
 const Config = require('../../config');
@@ -18,7 +16,7 @@ describe('Upload API', () => {
     const title = 'サンプルスライド';
     const author = 'mid0111';
 
-    request(app)
+    client
       .post('/api/upload')
       .attach('file', pdf)
       .field('title', title)
