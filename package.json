@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "DEBUG=online-session:* npm start",
+    "lint": "eslint . --fix --ext .js",
     "test": "mocha test/**/*.spec.js",
     "start": "node ./bin/www"
   },
@@ -14,6 +15,7 @@
     "express": "~4.13.4",
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
+    "multer": "^1.2.0",
     "serve-favicon": "~2.3.0"
   },
   "engines": {
@@ -21,6 +23,11 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "eslint": "^3.12.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0",
     "fs-extra": "^1.0.0",
     "mocha": "^3.2.0",
     "supertest": "^2.0.1"

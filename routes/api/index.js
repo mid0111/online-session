@@ -1,7 +1,7 @@
-var express = require('express');
-var upload = require('./upload');
+const express = require('express');
+const upload = require('./upload');
 
-var router = express.Router();
+const router = express.Router();
 
 router.use('/upload', upload);
 
