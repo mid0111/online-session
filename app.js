@@ -4,13 +4,13 @@ const path = require('path');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const i18n = require('i18n');
 
 // i18n
-const i18n = require("i18n");
 i18n.configure({
-  locales:['ja'],
-  directory: __dirname + '/locales',
-  objectNotation: true
+  locales: ['ja'],
+  directory: `${__dirname}/locales`,
+  objectNotation: true,
 });
 
 const routes = require('./routes/');
